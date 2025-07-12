@@ -1,5 +1,3 @@
-import { missingEnvVariableUrl } from "./utils";
-
 // Performance monitoring utilities
 export const performanceMetrics = {
   apiCalls: 0,
