@@ -1,11 +1,13 @@
 import Header from "@/components/Header";
-import Notes from "@/components/notes/Notes";
+import StockFeed from "@/components/stocks/StockFeed";
 
 export default function Home() {
   return (
     <main className="bg-[#EDEDED] h-screen">
       <Header />
-      <Notes />
+      <div className="mt-8">
+        <StockFeed />
+      </div>
     </main>
   );
 }

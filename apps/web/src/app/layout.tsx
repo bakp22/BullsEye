@@ -1,16 +1,10 @@
 import type { Metadata } from "next";
-import { Inter, Montserrat, Lato } from "next/font/google";
-import { cn } from "@/lib/utils";
 import "./globals.css";
 import ConvexClientProvider from "./ConvexClientProvider";
 
-const inter = Inter({ subsets: ["latin"] });
-const montserrat = Montserrat({ subsets: ["latin"] });
-const lato = Lato({ weight: "400", subsets: ["latin"] });
-
 export const metadata: Metadata = {
-  title: "Notes App",
-  description: "This is an app to take notes.",
+  title: "Stock Price Prediction",
+  description: "Simple stock price prediction tool.",
 };
 
 export default function RootLayout({
@@ -20,8 +14,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={cn(inter.className, montserrat.className, lato.className)}>
-        <ConvexClientProvider>{children}</ConvexClientProvider>
+      <body className="font-sans bg-white min-h-screen transition-colors duration-300">
+        <ConvexClientProvider>
+          {children}
+        </ConvexClientProvider>
       </body>
     </html>
   );

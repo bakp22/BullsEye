@@ -7,17 +7,7 @@
   --breakpoint-lg: 1024px;
   --breakpoint-xl: 1440px;
 
-  --color-primary: #0d87e1;
-
-  --font-inter: Inter, sans-serif;
-  --font-lato: Lato, sans-serif;
-  --font-montserrat: Montserrat, sans-serif;
-
-  --background-image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
-  --background-image-gradient-conic: conic-gradient(
-    from 180deg at 50% 50%,
-    var(--tw-gradient-stops)
-  );
+  --color-primary: #3b82f6;
 }
 
 @utility container {
@@ -42,35 +32,29 @@
   }
 }
 
-.linear_gradient {
-  background: linear-gradient(
-    267deg,
-    #fff -9.43%,
-    #040218 -9.42%,
-    #fff 4.63%,
-    #d2e4f2 127.55%
-  );
-}
-
-.bg_image {
-  background:
-    linear-gradient(
-      181deg,
-      rgba(255, 255, 255, 0) 57.92%,
-      #fff 97.09%,
-      rgba(255, 255, 255, 0) 127.09%
-    ),
-    url("/images/background.png"),
-    lightgray 0% 0% / 261.2499952316284px 261.2499952316284px repeat;
-}
-.button {
-  border-radius: 8px;
-  background: linear-gradient(
-    267deg,
-    #0983df -9.43%,
-    #040218 -9.42%,
-    #0d87e1 4.63%,
-    #0983df 127.55%
-  );
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+@layer utilities {
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .bg_image {
+    background-image: url('/images/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .bg_circle {
+    background-image: url('/images/cricle.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .button {
+    @apply bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200;
+  }
 }

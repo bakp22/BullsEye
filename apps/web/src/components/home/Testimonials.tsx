@@ -5,7 +5,7 @@ const TestimonialsData = [
   {
     rating: 5,
     review:
-      "Great note-taking application! The AI features make note-taking a breeze",
+      "Great financial application! The AI features makes handling my money a breeze.",
     name: "Ryan Lowry",
     designation: "Engineer & Author",
     profile: "/images/profile.png",
@@ -14,7 +14,7 @@ const TestimonialsData = [
   {
     rating: 5,
     review:
-      "Really like the clean design of UseNotes. The AI-driven search is impressively accurate, adding a personal dimension to my notes. Fast and very easy to use.",
+      "Really like the clean design of BullsEye. The AI-driven search is impressively accurate, adding a personal dimension to my watchlist. Fast and very easy to use.",
     name: "John Collins",
     designation: "Engineer & Author",
     profile: "/images/profile.png",
@@ -22,7 +22,7 @@ const TestimonialsData = [
   },
   {
     rating: 5,
-    review: "Simply brilliant! UseNotes has elevated my productivity.",
+    review: "Simply brilliant! BullsEye has elevated my financial freedom.",
     name: "Moe Partuj",
     designation: "Student",
     profile: "/images/Moe-Partuj.jpeg",
@@ -66,8 +66,8 @@ const Testimonials = () => {
             alt=""
             className="absolute hidden md:block right-0 bottom-full"
           />
-          {TestimonialsData.map((item, index) => (
-            <TestTimonialCard data={item} key={index} />
+          {TestimonialsData.map((item) => (
+            <TestTimonialCard data={item} key={item.name} />
           ))}
         </div>
       </div>

@@ -12,6 +12,7 @@
   "dependencies": {
     "@babel/runtime": "^7.25.0",
     "@clerk/clerk-expo": "^2.13.2",
+    "@expo/metro-runtime": "~5.0.4",
     "@expo/vector-icons": "^14.1.0",
     "@packages/backend": "*",
     "@react-native/virtualized-lists": "^0.80.0",

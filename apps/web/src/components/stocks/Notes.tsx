@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useState } from "react";
 import CreateNote from "./CreateNote";
 import NoteItem from "./NoteItem";
+import StockFeed from "./StockFeed";
 
 const Notes = () => {
   const [search, setSearch] = useState("");
@@ -47,12 +48,13 @@ const Notes = () => {
 
       <div className="border-[0.5px] mb-20 divide-y-[0.5px] divide-[#00000096] border-[#00000096]">
         {finalNotes &&
-          finalNotes.map((note, index) => (
-            <NoteItem key={index} note={note} deleteNote={deleteNote} />
+          finalNotes.map((note) => (
+            <NoteItem key={note._id} note={note} deleteNote={deleteNote} />
           ))}
       </div>
 
       <CreateNote />
+      {/* <StockFeed /> Removed chart feature from watchlist prediction cards */}
     </div>
   );
 };

@@ -19,12 +19,17 @@ export default function CreateNote() {
   const openaiKeySet = useQuery(api.openai.openaiKeySet) ?? true;
 
   const createUserNote = async () => {
-    await createNote({
-      title,
-      content,
-      isSummary: isChecked,
-    });
-    setOpen(false);
+    try {
+      await createNote({
+        title,
+        content,
+        isSummary: isChecked,
+      });
+      console.log("Note created!");
+      setOpen(false);
+    } catch (err) {
+      console.error("Error creating note:", err);
+    }
   };
 
   return (

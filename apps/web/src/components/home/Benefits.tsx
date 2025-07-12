@@ -2,89 +2,67 @@ import Image from "next/image";
 
 const benefits = [
   {
-    title: "Effortless Note-Taking",
-    description: "Capture thoughts effortlessly with our intuitive interface",
-    image: "/images/goodNews.png",
+    title: "AI-Powered Algorithms",
+    description: "Automatically generate concise predicictions of the market using advanced AI technology.",
+    image: "/images/bot.png",
   },
   {
-    title: "Seamless Sync",
-    description:
-      "Access your notes anytime, anywhere, with seamless cloud synchronization.",
+    title: "Smart Organization",
+    description: "Easily organize and categorize your stocks with our seamless watchlist feautre",
     image: "/images/cloudSync.png",
   },
   {
-    title: "Enhanced Productivity",
-    description:
-      "Let AI handle organization, so you can focus on what matters most.",
-    image: "/images/googleCalander.png",
+    title: "Real-time Feed",
+    description: "Access your market data across all devices with seamless cloud synchronization.",
+    image: "/images/monitor.png",
   },
   {
-    title: "AI-Powered Insights",
-    description:
-      "Gain valuable insights with smart analytics based on your note patterns.",
-    image: "/images/bot.png",
+    title: "Stock Integration",
+    description: "Track stock prices and market data alongside and conjure up your own strategies.",
+    image: "/images/stock.png",
   },
 ];
 
 const Benefits = () => {
   return (
-    <section id="Benefits" className="relative pointer-events-none">
-      <Image
-        src={"/images/blue-circle.svg"}
-        width={503}
-        height={531}
-        alt=""
-        className="absolute hidden sm:block -left-40 -top-48 h-[531px]"
-      />
-      <div className="container py-16 px-2 md:px-0">
-        <p className="text-black text-[17px] sm:text-3xl not-italic font-medium leading-[90.3%] tracking-[-0.75px] text-center font-montserrat pb-2 sm:pb-[18px]">
-          Benefits
-        </p>
-        <h3 className=" text-black text-3xl sm:text-[57px] not-italic font-medium leading-[90.3%] tracking-[-1.425px] font-montserrat text-center pb-[46px] sm:pb-[87px]">
-          Why Choose UseNotes
-        </h3>
+    <section className="bg-gray-50 py-16">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            Why Choose BullsEye?
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Predict stock prices with our advanced AI model and stay ahead of the market no matter what curveballs the market throws at you.
+          </p>
+        </div>
 
-        <div className="relative">
-          <div className="hidden sm:flex justify-between items-center absolute inset-0 -z-10">
-            {Array(3)
-              .fill(0)
-              .map((_, index) => (
-                <Image
-                  src="/images/cricle.svg"
-                  width={183}
-                  height={193}
-                  alt="line"
-                  key={index}
-                />
-              ))}
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 z-10 ">
-            {benefits.map((benefit, index) => (
-              <div
-                key={index}
-                className="flex gap-2 sm:gap-7 bg-white items-center border rounded-[17px] py-4 px-2 sm:py-12 sm:px-6 border-solid border-[#B8B5B5] shadow-xl"
-              >
-                <div className=" min-w-16 sm:min-w-28">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {benefits.map((benefit) => (
+            <div
+              key={benefit.title}
+              className="bg-white rounded-lg p-6 shadow-sm border border-gray-200"
+            >
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0">
                   <Image
                     src={benefit.image}
-                    width={100}
-                    height={100}
-                    alt="benefit"
-                    className="sm:w-[100px] w-[58px]"
+                    width={60}
+                    height={60}
+                    alt={benefit.title}
+                    className="rounded-lg"
                   />
                 </div>
-                <div className="">
-                  <h4 className="text-black text-[24px] sm:text-[42px] not-italic font-medium leading-[90.3%] tracking-[-1.05px] pb-2 sm:pb-6 font-montserrat">
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
                     {benefit.title}
-                  </h4>
-                  <p className="font-montserrat pb-2 text-black text-[17px] sm:text-3xl not-italic font-normal leading-[90.3%] tracking-[-0.75px]">
+                  </h3>
+                  <p className="text-gray-600">
                     {benefit.description}
                   </p>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
