@@ -2,9 +2,9 @@
   "name": "narby-monorepo",
   "private": true,
   "scripts": {
-    "dev": "turbo run dev",
-    "build": "turbo run build",
-    "clean": "turbo run clean && rm -rf node_modules",
+    "dev": "npx turbo run dev",
+    "build": "npx turbo run build",
+    "clean": "npx turbo run clean && rm -rf node_modules",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\" --ignore-path .gitignore"
   },
   "devDependencies": {
